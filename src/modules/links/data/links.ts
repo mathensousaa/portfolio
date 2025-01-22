@@ -1,4 +1,4 @@
-import { Github, Instagram, Linkedin } from "lucide-react";
+import { FileUser, Github, Instagram, Linkedin } from "lucide-react";
 import type { Link } from "../types";
 
 export const links: Link[] = [
@@ -9,12 +9,17 @@ export const links: Link[] = [
   },
   {
     title: 'Linkedin',
-    link: "https://github.com/mathensousaa",
+    link: "https://www.linkedin.com/in/matheus-de-sousa/",
     icon: Linkedin
   },
   {
     title: 'Instagram',
-    link: "https://github.com/mathensousaa",
+    link: "https://instagram.com/mathensousaa",
     icon: Instagram
   },
+  {
+    title: 'CV',
+    link: "",
+    icon: FileUser,
+  }
 ]

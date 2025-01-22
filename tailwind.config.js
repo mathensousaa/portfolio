@@ -6,7 +6,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				default: 'Jost',
+				default: 'Josefin Sans',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
