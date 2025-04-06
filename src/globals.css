@@ -1,59 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: PP Mori;
-  font-style: normal;
-  font-weight: 200;
-  font-display: block;
-  font-stretch: normal;
-  src: url('/public/PPMori-Extralight.otf');
-}
-
-@font-face {
-  font-family: 'PP Mori';
-  font-style: italic;
-  font-weight: 200;
-  font-display: block;
-  font-stretch: normal;
-  src: url('/public/PPMori-ExtralightItalic.otf');
-}
-
-@font-face {
-  font-family: 'PP Mori';
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  font-stretch: normal;
-  src: url('/public/PPMori-Regular.otf');
-}
-
-@font-face {
-  font-family: 'PP Mori';
-  font-style: italic;
-  font-weight: 400;
-  font-display: block;
-  font-stretch: normal;
-  src: url('/public/PPMori-RegularItalic.otf');
-}
-
-@font-face {
-  font-family: 'PP Mori';
-  font-style: normal;
-  font-weight: 500;
-  font-display: block;
-  font-stretch: normal;
-  src: url('/public/PPMori-SemiBold.otf');
-}
-
-@font-face {
-  font-family: 'PP Mori';
-  font-style: italic;
-  font-weight: 500;
-  font-display: block;
-  font-stretch: normal;
-  src: url('/public/PPMori-SemiBoldItalic.otf');
-}
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -151,7 +97,7 @@
 	--radius-lg: var(--radius);
 	--radius-xl: calc(var(--radius) + 4px);
   
-  --font-default: "PP Mori";
+  --font-default: var(--font-ppmori);
 }
 
 @layer base {
@@ -165,8 +111,4 @@
   html {
     @apply font-default;
   }
-}
-
-.text-stroke-3 {
-  text-shadow: -1px -1px 0 var(--primary), 1px -1px 0 var(--primary), -1px 1px 0 var(--primary), 1px 1px 0 var(--primary);
 }
