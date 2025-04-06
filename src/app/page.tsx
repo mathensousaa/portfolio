@@ -1,4 +1,4 @@
-import TextFill from '@/components/text-fill'
+import TextFill from '@/components/temp'
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
 
 export default function Home() {
