@@ -1,0 +1,5 @@
+npx lint-staged
+echo "Linting..."
+npx next lint --fix
+echo "Checking validity of types..."
+npx tsc --noEmit

@@ -1,14 +1,9 @@
-import { cc } from "@/libs/classes-combine";
-import type { HTMLAttributes } from "react";
+import { cc } from '@/libs/classes-combine'
+import type React from 'react'
 
-interface NumberTickerProps extends HTMLAttributes<HTMLSpanElement> {}
-
-export default function NumberTicker({ className, ...props }: NumberTickerProps) {
-  
-
-  return (
-    <span ref={ref} className={cc('', className)} {...props}>
-      
-    </span>
-  )
+export default function NumberTicker({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLSpanElement>) {
+  return <span className={cc('', className)} {...props} />
 }
