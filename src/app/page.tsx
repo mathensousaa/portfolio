@@ -3,7 +3,7 @@ import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
 
 export default function Home() {
   return (
-    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-2 p-3 pb-20 text-center sm:p-20">
+    <div className="grid min-h-svh grid-rows-[20px_1fr_20px] items-center justify-items-center gap-2 p-3 pb-20 text-center sm:p-20">
       <main className="row-start-2 flex w-full flex-col items-center justify-center text-center">
         <TextFill>matheusousa.dev</TextFill>
       </main>
