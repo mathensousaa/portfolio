@@ -5,9 +5,16 @@ import React from 'react'
 
 interface TextFillProps extends React.HTMLAttributes<HTMLDivElement> {
   duration?: number
+  onComplete?: VoidFunction
 }
 
-export default function TextFill({ duration = 3, children, className, ...props }: TextFillProps) {
+export default function TextFill({
+  duration = 3,
+  onComplete,
+  children,
+  className,
+  ...props
+}: TextFillProps) {
   const clipRef = React.useRef<SVGRectElement | null>(null)
 
   React.useEffect(() => {
@@ -15,10 +22,10 @@ export default function TextFill({ duration = 3, children, className, ...props }
       gsap.fromTo(
         clipRef.current,
         { y: 100, height: 0 },
-        { y: 0, height: 110, duration, ease: 'power2.inOut' },
+        { y: 0, height: 110, duration, ease: 'power2.inOut', onComplete },
       )
     }
-  }, [duration])
+  }, [duration, onComplete])
 
   return (
     <div className={cc('mx-auto w-full max-w-6xl', className)} {...props}>
