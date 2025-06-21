@@ -17,12 +17,12 @@ export const NavBar = () => {
     <nav
       aria-label="Menu principal"
       className={cc(
-        'rounded-full bg-primary/80 px-8 py-2 leading-none font-semibold text-primary-foreground',
+        'rounded-full bg-primary/80 px-3 py-1 text-xs font-bold text-primary-foreground/75 md:px-8 md:py-2 md:text-lg',
       )}
     >
       <ul className="flex items-center gap-4 uppercase">
         {items.map((item) => (
-          <li key={item.name} className="h-fit">
+          <li key={item.name} className="h-fit hover:cursor-pointer hover:text-primary-foreground">
             <span className="h-fit">{item.name}</span>
           </li>
         ))}
