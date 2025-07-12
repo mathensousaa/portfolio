@@ -41,7 +41,7 @@ export default function TextFill({
           y="100"
           textAnchor="middle"
           fontSize="110"
-          className="fill-none stroke-primary stroke-2 font-semibold"
+          className="fill-none stroke-primary font-semibold"
         >
           {children}
         </text>

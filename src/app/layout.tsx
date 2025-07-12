@@ -4,6 +4,7 @@ import '@/globals.css'
 import { cc } from '@/libs/classes-combine'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { GA_ID } from '@/config/environment'
+import { NoiseFilter } from '@/components/ui/noise-filter'
 
 const ppmori = localFont({
   src: [
@@ -53,9 +54,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={cc(ppmori.className, 'antialiased')}>{children}</body>
-      <GoogleAnalytics gaId={GA_ID} />
-    </html>
+    <>
+      <html lang="en">
+        <body className={cc(ppmori.className, 'antialiased')}>
+          {children}
+          <NoiseFilter />
+        </body>
+        <GoogleAnalytics gaId={GA_ID} />
+      </html>
+    </>
   )
 }
