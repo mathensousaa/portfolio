@@ -4,12 +4,12 @@ import type React from 'react'
 
 const Hero: React.FC = () => {
   return (
-    <section
-      className="flex min-h-svh flex-col items-center justify-center bg-cover bg-center text-center text-white"
-      style={{ backgroundImage: "url('/public/next.svg')" }}
-    >
-      <h1 className="mb-1 text-9xl font-bold text-tertiary lowercase">Matheus de Sousa</h1>
-      <p className="mb-6 text-xl font-medium text-muted-foreground">
+    <section className="container flex min-h-svh w-full flex-col items-center justify-center bg-cover bg-center text-center text-white">
+      <h1 className="mb-1 text-4xl font-bold text-tertiary lowercase sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
+        Matheus de Sousa
+      </h1>
+
+      <p className="mb-6 text-sm leading-tight font-medium text-muted-foreground sm:text-base md:text-lg lg:text-xl">
         Desenvolvo experiências digitais com foco no usuário, cuidado nos detalhes e alto padrão de
         qualidade.
       </p>

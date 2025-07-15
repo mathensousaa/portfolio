@@ -7,7 +7,10 @@ export const Header = ({ className, ref, ...props }: ComponentProps<'header'>) =
   return (
     <header
       ref={ref}
-      className={cc('fixed z-50 flex w-full items-center justify-between px-8 py-3', className)}
+      className={cc(
+        'fixed inset-x-0 z-50 mx-auto flex w-full items-center justify-between px-3 py-3 md:px-4 lg:px-6 xl:px-8',
+        className,
+      )}
       {...props}
     >
       <Logo />
