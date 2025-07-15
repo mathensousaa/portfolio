@@ -2,6 +2,7 @@ import { cc } from '@/libs/classes-combine'
 import gsap from 'gsap'
 import type React from 'react'
 import { useEffect, useRef } from 'react'
+import { useLocale } from 'next-intl'
 
 interface NumberTickerProps extends React.HTMLAttributes<HTMLSpanElement> {
   value: number
@@ -24,6 +25,7 @@ export const NumberTicker = ({
 }: NumberTickerProps) => {
   const numberRef = useRef<HTMLSpanElement>(null)
   const hasAnimated = useRef(false)
+  const locale = useLocale()
 
   useEffect(() => {
     if (!numberRef.current) return
@@ -46,7 +48,7 @@ export const NumberTicker = ({
               onUpdate: () => {
                 if (!numberRef.current) return
 
-                numberRef.current.textContent = Intl.NumberFormat('pt-BR', {
+                numberRef.current.textContent = Intl.NumberFormat(locale, {
                   minimumFractionDigits: decimalPlaces,
                   maximumFractionDigits: decimalPlaces,
                 }).format(Number(obj.val.toFixed(decimalPlaces)))
