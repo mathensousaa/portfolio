@@ -116,6 +116,10 @@
 		@apply bg-background text-foreground;
 	}
 
+  .container {
+    @apply px-3 md:px-4 lg:px-6 xl:px-8 mx-auto inset-x-0 w-full;
+  }
+
   body::before {
     position: absolute;
     left: 0;
