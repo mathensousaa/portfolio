@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "title": "Matheus de Sousa",
+    "description": "Desenvolvedor Frontend especializado em React, Next.js e TypeScript. Crio experiências digitais com foco no usuário, cuidado nos detalhes e alto padrão de qualidade.",
+    "keywords": "desenvolvedor frontend, react, nextjs, typescript, portfolio, web development, ui/ux"
+  },
+  "hero": {
+    "title": "Matheus de Sousa",
+    "description": "Desenvolvo experiências digitais com foco no usuário, cuidado nos detalhes e alto padrão de qualidade.",
+    "github": "Github",
+    "linkedin": "Linkedin"
+  },
+  "header": {
+    "logo": "Matheus de Sousa"
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Erro",
+    "retry": "Tentar novamente"
+  },
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "contact": "Contato"
+  }
+}
+
