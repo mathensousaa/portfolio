@@ -62,7 +62,7 @@ export const NumberTicker = ({
 
     observer.observe(numberRef.current)
     return () => observer.disconnect()
-  }, [value, decimalPlaces, delay, direction, startValue, duration])
+  }, [value, decimalPlaces, delay, direction, startValue, duration, locale])
 
   return (
     <span
