@@ -20,7 +20,7 @@ export const NavBarLink = ({ item }: NavBarLinkProps) => {
     <li
       className={cc(
         'h-fit hover:cursor-pointer hover:text-primary-foreground',
-        pathname === item.href && 'text-primary-foreground',
+        pathname === item.href && 'font-extrabold',
       )}
     >
       <Link href={item.href} className="h-fit">

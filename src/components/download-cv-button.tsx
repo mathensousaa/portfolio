@@ -11,7 +11,7 @@ export const DownloadCvButton = () => {
   return (
     <Button
       variant="tertiary"
-      className="h-full rounded-full"
+      className="h-full rounded-full before:rounded-full"
       onClick={downloadCv}
       aria-label={t('downloadCV')}
     >

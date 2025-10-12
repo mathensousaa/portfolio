@@ -1,53 +1,31 @@
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { setRequestLocale } from 'next-intl/server'
 import { hasLocale } from 'next-intl'
 import '@/globals.css'
-import { cc } from '@/libs/classes-combine'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { GA_ID } from '@/config/environment'
 import { NoiseFilter } from '@/components/ui/noise-filter'
 import { routing } from '@/i18n/routing'
 import { ThemeProvider } from '@/components/theme-provider'
+import { Inter, Source_Serif_4, JetBrains_Mono } from 'next/font/google'
+import { cc } from '@/libs/classes-combine'
 
-const ppmori = localFont({
-  src: [
-    {
-      path: '../../../public/fonts/PPMori-Regular.otf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../../../public/fonts/PPMori-SemiBold.otf',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../../../public/fonts/PPMori-Extralight.otf',
-      weight: '200',
-      style: 'normal',
-    },
-    {
-      path: '../../../public/fonts/PPMori-RegularItalic.otf',
-      weight: '400',
-      style: 'italic',
-    },
-    {
-      path: '../../../public/fonts/PPMori-SemiBoldItalic.otf',
-      weight: '500',
-      style: 'italic',
-    },
-    {
-      path: '../../../public/fonts/PPMori-ExtralightItalic.otf',
-      weight: '200',
-      style: 'italic',
-    },
-  ],
-  variable: '--font-ppmori',
-  display: 'swap',
+const sans = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+})
+
+const serif = Source_Serif_4({
+  subsets: ['latin'],
+  variable: '--font-serif',
+})
+
+const mono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
 })
 
 // Generate static params for all supported locales
@@ -101,7 +79,7 @@ export default async function RootLayout({
   return (
     <>
       <html lang={locale} suppressHydrationWarning>
-        <body className={cc(ppmori.className, 'antialiased')}>
+        <body className={cc(sans.variable, serif.variable, mono.variable)}>
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"

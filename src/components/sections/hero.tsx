@@ -8,11 +8,10 @@ const Hero: React.FC = () => {
 
   return (
     <section className="container flex min-h-svh w-full flex-col items-center justify-center bg-cover bg-center text-center text-white">
-      <h1 className="mb-1 text-4xl font-bold text-tertiary lowercase sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
+      <h1 className="mb-1 text-4xl font-extrabold tracking-tighter text-tertiary lowercase sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
         {t('title')}
       </h1>
-
-      <p className="mb-6 text-sm leading-tight font-medium text-muted-foreground sm:text-base md:text-lg lg:text-xl">
+      <p className="mb-6 font-serif text-sm leading-tight font-medium text-muted-foreground italic sm:text-base md:text-lg lg:text-xl">
         {t('description')}
       </p>
       <div className="flex space-x-4">

@@ -41,7 +41,7 @@ export default function TextFill({
           y="100"
           textAnchor="middle"
           fontSize="110"
-          className="fill-none stroke-primary font-semibold"
+          className="fill-none stroke-primary font-extrabold"
         >
           {children}
         </text>
@@ -51,7 +51,7 @@ export default function TextFill({
           y="100"
           textAnchor="middle"
           fontSize="110"
-          className="fill-primary stroke-primary font-semibold"
+          className="fill-primary stroke-primary font-extrabold"
           clipPath="url(#text-clip)"
         >
           {children}
