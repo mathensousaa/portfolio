@@ -23,6 +23,12 @@
     "about": "About",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "navbar": {
+    "ariaLabel": "Main menu",
+    "home": "Home",
+    "links": "Links",
+    "downloadCV": "Download CV"
   }
 }
 

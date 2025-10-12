@@ -1,4 +1,4 @@
-// import { NavBar } from '@/components/sections/navbar'
+import { NavBar } from '@/components/sections/navbar'
 import { Logo } from '@/components/ui/logo'
 import { LanguageSwitcher } from '@/components/language-switcher'
 import { cc } from '@/libs/classes-combine'
@@ -15,7 +15,7 @@ export const Header = ({ className, ref, ...props }: ComponentProps<'header'>) =
       {...props}
     >
       <Logo />
-      {/* <NavBar /> */}
+      <NavBar />
       <LanguageSwitcher />
     </header>
   )

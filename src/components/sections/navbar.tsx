@@ -1,32 +1,35 @@
+import { DownloadCvButton } from '@/components/download-cv-button'
+import { NavBarLink } from '@/components/sections/navbar-link'
 import { cc } from '@/libs/classes-combine'
+import { useTranslations } from 'next-intl'
 
 const items = [
   {
-    name: 'Resumo',
+    key: 'home',
+    href: '/',
   },
   {
-    name: 'Projetos',
-  },
-  {
-    name: 'Sobre mim',
+    key: 'links',
+    href: '/links',
   },
 ]
 
 export const NavBar = () => {
+  const t = useTranslations('navbar')
+
   return (
     <nav
-      aria-label="Menu principal"
+      aria-label={t('ariaLabel')}
       className={cc(
-        'rounded-full bg-primary/80 px-3 py-1 text-xs font-bold text-primary-foreground/75 md:px-8 md:py-2 md:text-lg',
+        'flex items-center justify-between gap-6 rounded-full bg-primary/80 py-1 pr-1 pl-3 text-xs font-bold text-primary-foreground/75 md:py-1 md:pr-1 md:pl-8 md:text-lg',
       )}
     >
       <ul className="flex items-center gap-4 uppercase">
         {items.map((item) => (
-          <li key={item.name} className="h-fit hover:cursor-pointer hover:text-primary-foreground">
-            <span className="h-fit">{item.name}</span>
-          </li>
+          <NavBarLink key={item.key} item={item} />
         ))}
       </ul>
+      <DownloadCvButton />
     </nav>
   )
 }

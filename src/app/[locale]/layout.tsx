@@ -11,6 +11,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import { GA_ID } from '@/config/environment'
 import { NoiseFilter } from '@/components/ui/noise-filter'
 import { routing } from '@/i18n/routing'
+import { ThemeProvider } from '@/components/theme-provider'
 
 const ppmori = localFont({
   src: [
@@ -99,12 +100,19 @@ export default async function RootLayout({
 
   return (
     <>
-      <html lang={locale}>
+      <html lang={locale} suppressHydrationWarning>
         <body className={cc(ppmori.className, 'antialiased')}>
-          <NextIntlClientProvider messages={messages}>
-            {children}
-            <NoiseFilter />
-          </NextIntlClientProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <NextIntlClientProvider messages={messages}>
+              {children}
+              <NoiseFilter />
+            </NextIntlClientProvider>
+          </ThemeProvider>
         </body>
         <GoogleAnalytics gaId={GA_ID} />
       </html>
